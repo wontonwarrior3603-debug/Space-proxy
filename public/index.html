@@ -324,19 +324,6 @@
 		<script>
 			lucide.createIcons();
 		</script>
-		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', function () {
-				let hideAds = localStorage.getItem('hideAds');
-
-				if (hideAds === null || hideAds === 'false') {
-					let script = document.createElement('script');
-					script.type = 'text/javascript';
-					script.src =
-						'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3747175608041884';
-					document.body.appendChild(script);
-				}
-			});
-		</script>
 		<script>
 			let CLF_config = {
 				app_id: '163a312a-7cde-41ab-a80c-cb4cf281efdf',
