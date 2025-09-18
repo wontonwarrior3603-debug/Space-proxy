@@ -41,6 +41,13 @@ cd Space
 pnpm i
 pnpm start
 ```
+### pnpm
+<p>If you are using pnpm, run the following commands:<p/>
+
+```
+pnpm i
+pnpm start
+```
 
 ### Updating
 
