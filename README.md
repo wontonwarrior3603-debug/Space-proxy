@@ -33,6 +33,14 @@ cd Space
 pnpm i
 pnpm start
 ```
+## Ad free Deployment
+
+```
+git clone --branch Ad-Free https://github.com/NightProxy/space.git
+cd Space
+pnpm i
+pnpm start
+```
 
 ### Updating
 
