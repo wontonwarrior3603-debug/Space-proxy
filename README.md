@@ -57,6 +57,7 @@ git pull --force --allow-unrelated-histories
 
 <a target="_blank" href="https://heroku.com/deploy/?template=https://github.com/NightProxy/Space"><img alt="Deploy to Heroku" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg"></a>
 <a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/NightProxy/Space"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
+<a target="_blank" href="https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/NightProxy/Space/deploy-buttons/archive/refs/heads/main.zip"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/oraclecloud.svg"></a>
 <a target="_blank" href="https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/NightProxy/Space"><img alt="Deploy to IBM Cloud" src="https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/ibmcloud.svg"></a>
 <a target="_blank" href="https://deploy.azure.com/?repository=https://github.com/NightProxy/Space"><img alt="Deploy to Azure" src="https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/azure.svg"></a>
 <a target="_blank" href="https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/NightProxy/Space"><img alt="Deploy to Amplify" src="https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/amplifyconsole.svg"></a>
