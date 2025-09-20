@@ -1,16 +1,16 @@
 // ~ is the settings page, so ~.js is settings specific js that wont get loaded globally
 
-const crypto = require('crypto');
-const password = 'your-encryption-password'; // Replace with a secure password
+//const crypto = require('crypto');
+//const password = 'your-encryption-password'; // Replace with a secure password
 
-function encrypt(text) {
-    const cipher = crypto.createCipher('aes-256-ctr', password);
-    return cipher.update(text, 'utf8', 'hex') + cipher.final('hex');
+//function encrypt(text) {
+    //const cipher = crypto.createCipher('aes-256-ctr', password);
+    //return cipher.update(text, 'utf8', 'hex') + cipher.final('hex');
 }
 
-function decrypt(text) {
-    const decipher = crypto.createDecipher('aes-256-ctr', password);
-    return decipher.update(text, 'hex', 'utf8') + decipher.final('utf8');
+//function decrypt(text) {
+    //const decipher = crypto.createDecipher('aes-256-ctr', password);
+    //return decipher.update(text, 'hex', 'utf8') + decipher.final('utf8');
 }
 
 localforage.setItem('e', 'e');
