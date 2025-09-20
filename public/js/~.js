@@ -6,12 +6,12 @@
 //function encrypt(text) {
     //const cipher = crypto.createCipher('aes-256-ctr', password);
     //return cipher.update(text, 'utf8', 'hex') + cipher.final('hex');
-}
+//}
 
 //function decrypt(text) {
     //const decipher = crypto.createDecipher('aes-256-ctr', password);
     //return decipher.update(text, 'hex', 'utf8') + decipher.final('utf8');
-}
+//}
 
 localforage.setItem('e', 'e');
 shapePositions = {
