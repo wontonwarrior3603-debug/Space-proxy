@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('storage', updateDummyElement);
 
 	const originalSetItem = localStorage.setItem;
-	localStorage.setItem = function (key, value) {
+	localStorage.setItem = function (key, _value) {
 		originalSetItem.apply(this, arguments);
 		if (key === 'dropdown-selected-text-tabCloak') {
 			updateDummyElement();
