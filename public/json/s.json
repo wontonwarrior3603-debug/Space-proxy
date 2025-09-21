@@ -1,5 +1,11 @@
 [
 	{
+		"name": "! Create Custom App",
+		"image": "/assets/media/icons/custom.webp",
+		"categories": ["all"],
+		"custom": "true"
+	},
+	{
 		"name": "Spotify",
 		"url": "https://open.spotify.com/search",
 		"img": "/assets/imgs/s/Spotify.webp",
