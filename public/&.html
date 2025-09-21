@@ -478,6 +478,16 @@
 			});
 		</script>
 		<script src="/js/localforage.min.js"></script>
+		<script src="/js/c.js"></script>
+		<script>
+		// Attach open modal logic to button
+		document.addEventListener('DOMContentLoaded', function() {
+			const btn = document.getElementById('openCustomAppModalBtn');
+			if (btn && window.openCustomAppModal) {
+				btn.onclick = window.openCustomAppModal;
+			}
+		});
+		</script>
 		<script src="/js/json-loader.js"></script>
 		<script src="/js/c.js"></script>
 		<script src="/js/p.js"></script>
