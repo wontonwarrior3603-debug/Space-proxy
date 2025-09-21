@@ -99,6 +99,80 @@ function isInLocalStorage(key) {
 
 const currentLocation = window.location.href;
 document.addEventListener('DOMContentLoaded', function () {
+	// --- Custom App Logic Start ---
+	// Utility to get and set custom apps in localStorage
+	function getCustomApps() {
+		return JSON.parse(localStorage.getItem('customApps') || '[]');
+	}
+	function setCustomApps(apps) {
+		localStorage.setItem('customApps', JSON.stringify(apps));
+	}
+
+	// Render custom apps in .appsContainer
+	function renderCustomApps() {
+		const container = document.querySelector('.appsContainer');
+		if (!container) return;
+		container.innerHTML = '';
+		const apps = getCustomApps();
+		if (apps.length === 0) {
+			container.innerHTML = '';
+			return;
+		}
+		apps.forEach((app, i) => {
+			const div = document.createElement('div');
+			div.className = 'custom-app-card';
+			div.style = 'display:inline-block;margin:10px;padding:10px;border-radius:10px;background:#222;box-shadow:0 2px 8px #0002;cursor:pointer;width:180px;text-align:center;';
+			div.innerHTML = `
+				<img src="${app.image || '/assets/default.png'}" alt="App Image" style="width:64px;height:64px;border-radius:8px;margin-bottom:8px;background:#333;object-fit:cover;">
+				<div style="font-weight:bold;color:#fff;">${app.name}</div>
+				<div style="font-size:12px;color:#aaa;word-break:break-all;">${app.url}</div>
+			`;
+			div.onclick = () => {
+				window.open(app.url, '_blank');
+			};
+			container.appendChild(div);
+		});
+	}
+
+	// Handle custom app modal
+	const customAppModal = document.getElementById('customAppModal');
+	const customAppForm = document.getElementById('customAppForm');
+	const customAppSuccess = document.getElementById('customAppSuccess');
+	if (customAppModal && customAppForm) {
+		// Open modal logic (assume a button with id 'openCustomAppModal' exists or add your own trigger)
+		window.openCustomAppModal = function() {
+			customAppModal.style.display = 'block';
+		};
+		// Close modal
+		customAppModal.querySelector('.custom-app-close').onclick = function() {
+			customAppModal.style.display = 'none';
+		};
+		document.getElementById('cancelBtn').onclick = function() {
+			customAppModal.style.display = 'none';
+		};
+		// Form submit
+		customAppForm.onsubmit = function(e) {
+			e.preventDefault();
+			const name = customAppForm.appName.value.trim();
+			const url = customAppForm.appUrl.value.trim();
+			const image = customAppForm.appImage.value.trim();
+			if (!name || !url) return;
+			const apps = getCustomApps();
+			apps.push({ name, url, image });
+			setCustomApps(apps);
+			customAppModal.style.display = 'none';
+			if (customAppSuccess) {
+				customAppSuccess.style.display = 'block';
+				setTimeout(() => { customAppSuccess.style.display = 'none'; }, 2000);
+			}
+			renderCustomApps();
+		};
+	}
+
+	// Initial render
+	renderCustomApps();
+
+	// --- Custom App Logic End ---
 	// Cloaking
 	if (
 		currentLocation !== 'about:blank' ||
