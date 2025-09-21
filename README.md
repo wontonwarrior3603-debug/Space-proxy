@@ -14,6 +14,7 @@
 -   Out of this world UI
 -   Games
 -   Apps
+-   Added the ability to make custom apps and games
 -   Proxy
 -   Settings
 -   Cloaking [Blob & About:Blank]
