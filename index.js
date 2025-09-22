@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import helmet from 'helmet';
 import http from 'node:http';
 import path from 'node:path';
 import { hostname } from 'node:os';
@@ -17,6 +18,11 @@ const __dirname = process.cwd();
 const PORT = process.env.PORT || 6060;
 
 app.use(cors());
+app.use(helmet({
+	contentSecurityPolicy: false // Set to true and configure if you want CSP
+}));
+// Prevent X-Powered-By header
+app.disable('x-powered-by');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
