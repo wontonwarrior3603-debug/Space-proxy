@@ -4,6 +4,8 @@
 
 | Version | Supported |
 | ------- | --------- |
+| v1.1.1  | ✅ Yes    |
+| v1.1.0  | ✅ Yes    |
 | v1.0.0  | ✅ Yes    |
 
 ## Why?
@@ -14,7 +16,7 @@ repository.
 
 # Current Version
 
-The current version of Space is **v1.0.0**
+The current version of Space is **v1.1.1**
 
 > [!IMPORTANT]
 > If you do not have the current version of Space please update
